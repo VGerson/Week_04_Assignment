@@ -34,12 +34,17 @@ console.log(newArrayAverage); // Prints average 28.88888.... to console.
 console.log(` QUESTION 2 - Create an array called names that contains the following values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
 A - Use a loop to iterate through the array and calculate the average number of letters per name.`);
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']; // 23 letters and 6 strings within array
-let totalLetters = 0;
+let average = [];
 for (let index = 0; index < names.length; index++){  // Looping through array to find total number of characters
-    totalLetters = totalLetters + names[index].length;                
-    averageLetters = totalLetters / names.length; // total characters / total strings = average number of letters per name.
-}             
-console.log(averageLetters);
+    
+    let totalLetters = 0;
+    totalLetters += names[index].length;                
+    averageLetters = totalLetters / 2 // total characters / total strings = average number of letters per name.
+    
+    average.push(averageLetters);
+}      
+
+console.log (average);
 
 
  console.log(`B - Use a loop to iterate through the array again and concatenate all the names together, separated by spaces. `);
